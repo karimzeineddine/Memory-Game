@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="part1">
+        <div class="nav">
+            <div class="starting">
+                <h1 onclick="start()" class="start">Start</h1>
+            </div>
+            <div class="name">
+                <p id="user-name"></p>
+                <p class="level">Level : none</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box" id="green" data-id="0" onclick="playSound('green')">
+                green 0
+            </div>
+            <div class="box" id="red" data-id="1" onclick="playSound('red')">
+                red 1
+            </div>
+            <div class="box" id="yellow" data-id="2" onclick="playSound('yellow')">
+                yellow 2
+            </div>
+            <div class="box" id="blue" data-id="3" onclick="playSound('blue')">
+                blue 3
+            </div>
+        </div>
+        <div class="message">
+
+        </div>
+        <audio id="greenSound" src="sounds/green.mp3"></audio>
+    <audio id="redSound" src="sounds/red.mp3"></audio>
+    <audio id="yellowSound" src="sounds/yellow.mp3"></audio>
+    <audio id="blueSound" src="sounds/blue.mp3"></audio>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.part1{
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+body{
+    font-family: 'Press Start 2P', cursive;
+}
+.nav{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 30px;
+    padding-top: 60px;
+}
+.nav h1{
+    font-family: 'Press Start 2P', cursive;
+}
+.starting{
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 90px;
+}
+.name {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-end;
+    gap: 10px;
+    padding-right: 80px;
+}
+.name p{
+
+    font-family: 'Press Start 2P', cursive;
+}
+.content{
+    width: 440px;
+    height: 400px;
+    background-color:rgb(255, 255, 255);
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,180px);
+    gap: 30px;
+    padding: 20px;
+}
+.box{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#red:hover{
+    background-color: red;
+}
+#green:hover{
+    background-color: rgba(0, 189, 0, 0.733);
+}
+#blue:hover{
+    background-color: blue;
+}
+#yellow:hover{
+    background-color: yellow;
+}
+#red{
+    background-color: rgb(255, 47, 47);
+}
+#green{
+    background-color: rgb(0, 146, 0);
+}
+#blue{
+    background-color: rgb(59, 59, 255);
+}
+#yellow{
+    background-color: rgb(255, 166, 0);
+}
+.message {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    color: red;
+}
+.highlight {
+    border: 5px solid rgb(0, 0, 0);
+  }
+
+@media (max-width:600px) {
+    .name{
+        padding: 0;
+        width: 50%;
+    }
+    .message{
+        width: 90%;
+        padding-left: 30px;
+    }
+}
