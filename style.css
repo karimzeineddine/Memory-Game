@@ -10,6 +10,8 @@
 }
 body{
     font-family: 'Press Start 2P', cursive;
+    height: 100%;
+    width: 100%;
 }
 .nav{
     height: 90px;
@@ -103,7 +105,15 @@ body{
         width: 50%;
     }
     .message{
-        width: 90%;
-        padding-left: 30px;
+        width: 80%;
+        padding-left: 100px;
+    }
+    .content{
+        width: 300px;
+        height: 300px;
+        grid-template-columns: repeat(2,120px);
+    }
+    .box{
+        font-size: 13px;
     }
 }
