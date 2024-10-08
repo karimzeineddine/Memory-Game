@@ -1,16 +1,19 @@
-let text = prompt("Enter your name please?")
+//for entering his name from the alert
+let text = prompt("Enter your name please.")
 let userName = document.getElementById("user-name")
+//adding the username on the screen
 userName.innerHTML=text
 
-let startClick= document.querySelector(".start")
-let message = document.querySelector(".message")
-let boxes = document.querySelectorAll(".box")
-let levelText = document.querySelector(".level")
+let startClick= document.querySelector(".start")//start text
+let message = document.querySelector(".message")//message text
+let boxes = document.querySelectorAll(".box") // 4 colors divs
+let levelText = document.querySelector(".level")// level text
 
 let level = 0;  // Level tracker
 let sequence = [];  // Random sequence to remember
 let playerSequence = [];  // Player input sequence
 
+// Audio sounds
 let greenSound = new Audio('sounds/green.mp3');
 let redSound = new Audio('sounds/red.mp3');
 let yellowSound = new Audio('sounds/yellow.mp3');
@@ -18,11 +21,14 @@ let blueSound = new Audio('sounds/blue.mp3');
 let winSound = new Audio('sounds/win.wav');
 let loseSound = new Audio('sounds/wrong.mp3');
 
+// border removing around each div
 function removeHighlight() {
     boxes.forEach(box => box.classList.remove('highlight'));
   }
-  
+
+// adding border to the div
 function highlightBox(boxId) {
+    // each box given a data-id 
     const selectedBox = document.querySelector(`[data-id='${boxId}']`);
     selectedBox.classList.add('highlight');
     // Play the corresponding sound
@@ -40,9 +46,10 @@ function highlightBox(boxId) {
             blueSound.play();
             break;
     }
+    // Highlight for 0.5 seconds
     setTimeout(() => {
         selectedBox.classList.remove('highlight');
-    }, 500);  // Highlight for 0.5 seconds
+    }, 500);  
 }
 
 // Function to highlight the sequence
